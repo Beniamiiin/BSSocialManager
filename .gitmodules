@@ -1,0 +1,3 @@
+[submodule "OK-ios-sdk"]
+	path = OK-ios-sdk
+	url = https://github.com/apiok/ok-ios-sdk
