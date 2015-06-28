@@ -1,18 +1,18 @@
 # BSSocialManager
 Simple manager for get token from VK, FB, Twitter, Odnoklassniki.
 
-# Download
-##### Submodule #####
+### Download
+##### Submodule
 ```
 git clone https://github.com/BenjaminSarkisyan/BSSocialManager --recursive
 ```
-##### Cocoapods #####
+##### Cocoapods
 ```
 pod 'OK-ios-sdk',       :git => 'https://github.com/apiok/ok-ios-sdk'
 pod 'BSSocialManager',  :git => 'https://github.com/BenjaminSarkisyan/BSSocialManager'
 ```
 
-# Install
+### Install
 <!--![Image](http://s12.postimg.org/m4aa7v0q5/Social_Settings.png)-->
 1. Add in Info.plist<br/>
 ```XML
@@ -62,7 +62,7 @@ pod 'BSSocialManager',  :git => 'https://github.com/BenjaminSarkisyan/BSSocialMa
 2. Add facebook url scheme in format "fb\<FB_APP_ID\>"<br/>
 3. Use
 
-# How to use
+### How to use
 ```
 VK:[SocialManager loginToVKWithSuccess:^(NSString *token){} failure:^(NSError *error){}];
 FB:[SocialManager loginToFBWithSuccess:^(NSString *token){} failure:^(NSError *error){}];
