@@ -64,8 +64,8 @@ pod 'BSSocialManager',  :git => 'https://github.com/BenjaminSarkisyan/BSSocialMa
 
 # How to use
 ```
-VK:[SocialManager loginToVKWithSuccess:nil failure:nil];
-FB:[SocialManager loginToFBWithSuccess:nil failure:nil];
-TW:[SocialManager loginToTWWithSuccess:nil failure:nil];
-OK:[SocialManager loginToOKWithSuccess:nil failure:nil];
+VK:[SocialManager loginToVKWithSuccess:^(NSString *token){} failure:^(NSError *error){}];
+FB:[SocialManager loginToFBWithSuccess:^(NSString *token){} failure:^(NSError *error){}];
+TW:[SocialManager loginToTWWithSuccess:^(NSString *token){} failure:^(NSError *error){}];
+OK:[SocialManager loginToOKWithSuccess:^(NSString *token){} failure:^(NSError *error){}];
 ```
