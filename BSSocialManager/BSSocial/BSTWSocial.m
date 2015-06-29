@@ -13,6 +13,19 @@ static NSString *const kBSTWPlistKey          = @"TW";
 static NSString *const kBSTWPlistAppIDKey     = @"TWAppID";
 static NSString *const kBSTWPlistAppSecretKey = @"TWAppSecret";
 
+@interface BSLoginContainer : UIViewController
+
+@end
+
+@implementation BSLoginContainer
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+	return UIStatusBarStyleLightContent;
+}
+
+@end
+
 @interface BSTWSocial ()
 
 - (void)p_loginToTWWithSuccess:(BSRequestSuccess)success failure:(BSRequestFailure)failure;
@@ -94,9 +107,14 @@ static NSString *const kBSTWPlistAppSecretKey = @"TWAppSecret";
             }
         }
     }];
-    
-    [[BSSocialManagerHelper loginContainer] presentViewController:loginController animated:YES completion:nil];
+	
+	BSLoginContainer *loginContainerViewController = [BSLoginContainer new];
+	
+	[loginContainerViewController.view addSubview:loginController.view];
+	[loginContainerViewController addChildViewController:loginController];
+	[loginController didMoveToParentViewController:loginContainerViewController];
+	
+    [[BSSocialManagerHelper loginContainer] presentViewController:loginContainerViewController animated:YES completion:nil];
 }
 
 @end
-
