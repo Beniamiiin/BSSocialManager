@@ -13,11 +13,15 @@ static NSString *const kBSTWPlistKey          = @"TW";
 static NSString *const kBSTWPlistAppIDKey     = @"TWAppID";
 static NSString *const kBSTWPlistAppSecretKey = @"TWAppSecret";
 
-@interface BSLoginContainer : UIViewController
+@interface FHSTwitterEngineController : UIViewController
 
 @end
 
-@implementation BSLoginContainer
+@interface FHSTwitterEngineController (StatusBar)
+
+@end
+
+@implementation FHSTwitterEngineController (StatusBar)
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
@@ -108,13 +112,7 @@ static NSString *const kBSTWPlistAppSecretKey = @"TWAppSecret";
         }
     }];
 	
-	BSLoginContainer *loginContainerViewController = [BSLoginContainer new];
-	
-	[loginContainerViewController.view addSubview:loginController.view];
-	[loginContainerViewController addChildViewController:loginController];
-	[loginController didMoveToParentViewController:loginContainerViewController];
-	
-    [[BSSocialManagerHelper loginContainer] presentViewController:loginContainerViewController animated:YES completion:nil];
+    [[BSSocialManagerHelper loginContainer] presentViewController:loginController animated:YES completion:nil];
 }
 
 @end
