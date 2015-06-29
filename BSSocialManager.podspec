@@ -5,7 +5,6 @@ Pod::Spec.new do |s|
   s.source_files 	= 'BSSocialManager/**/*.{h,m}'
   s.requires_arc 	= true
 
-  s.dependency 		'FBSDKCoreKit'
   s.dependency 		'FBSDKLoginKit'
   s.dependency 		'VK-ios-sdk'
   s.dependency		'FHSTwitterEngine'
